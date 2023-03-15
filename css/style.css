@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #0fc9a4;
+  font-family: sans-serif;
+}
+
+.subscribe-btn {
+  background-color: aliceblue;
+  padding: 30px;
+  position: relative;
+  left: 93.5%;
+  top: 90%;
+  border-radius: 6px;
+  box-shadow: 1px 0px 20px 2px rgb(37 37 37 / 50%);
+}
+
+.subscribe-btn i {
+  position: absolute;
+  top: 4mm;
+  left: 2mm;
+  color: #777;
+}
+
+.subscribe-btn i:hover {
+  color: #000;
+  transition: all 0.5s;
+  animation: bell 1 0.8s forwards ease-in-out;
+}
+
+.popup {
+  width: 600px;
+  padding: 25px 25px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px rgb(0 0 0 / 20%);
+  transition: all 0.4s;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+}
+.popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+}
+.popup .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popup .content img {
+  max-width: 200px;
+}
+
+.popup .content h2 {
+  margin: 30px 0px 10px;
+  color: #11263c;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.popup .content form {
+  width: 100%;
+}
+
+.input-falid {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-falid input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: #6d7c9b;
+  background-color: #fff;
+  border: 1px solid #e7ecf7;
+  font-size: 18px;
+  outline: none;
+}
+
+.input-falid input::placeholder {
+  color: #6d7c9b;
+}
+
+.input-falid .sub-btn {
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0fc9a4;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: cursive;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  transition: all 0.3s;
+}
+.input-falid .sub-btn:hover{
+  background-color: #0b9c7f;
+  animation: letterSpace 1 1s 0.2s forwards ease-in-out;
+}
+.close{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 30px;
+  color: #777;
+  cursor: pointer;
+}
+.close:hover{
+  color: #333;
+}
+
+/* animation */
+
+@keyframes bell {
+  25% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes letterSpace {
+  25% {
+    letter-spacing: 3px;
+  }
+  50% {
+    letter-spacing: 3px;
+  }
+  100% {
+    letter-spacing: 1.5px;
+  }
+}
